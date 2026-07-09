@@ -1,0 +1,175 @@
+/* ===== ФОН ПОРТФОЛІО (100% видимий) ===== */
+html, body {
+  background: transparent !important;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* фон НЕ з мінусом, а на 0 */
+.portfolio-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.portfolio-page {
+  padding: 80px 0 80px;
+  background: transparent; /* ❗ КЛЮЧОВЕ */
+  position: relative;
+  z-index: 2;
+}
+
+.project-card {
+  background: #324f53;
+  border-radius: 16px;
+  padding: 16px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+
+.portfolio-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+
+  
+}
+
+.layer-back {
+  background-image: url("../img/slides/slide-1-layer-back.jpg");
+  opacity: 0.95;
+}
+
+.layer-middle {
+  background-image: url("../img/slides/slide-1-layer-middle.png");
+  opacity: 0.65;
+}
+
+.layer-front {
+  background-image: url("../img/slides/slide-1-layer-front.png");
+  opacity: 0.45;
+}
+
+.portfolio-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: rgba(43, 71, 75, 0.60);
+  pointer-events: none;
+}
+
+/* весь контент ПОВЕРХ фону */
+main {
+  position: relative;
+  z-index: 2;
+}
+
+/* щоб хедер лежав поверх фону */
+.top-line {
+  position: relative;
+  z-index: 3;
+}
+
+/* щоб фон йшов ПІД хедером, а не обривався */
+.portfolio-bg,
+.portfolio-overlay {
+  top: 0;
+}
+
+/* === МОБІЛЬНЕ МЕНЮ ДЛЯ ПОРТФОЛІО === */
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: #2B474B;
+  padding: 80px 24px;
+  transition: .4s ease;
+  z-index: 1000;
+}
+
+.menu-mobile.active {
+  right: 0;
+}
+
+.portfolio-title{
+  font-size: 40px;
+}
+
+
+/* ===== ФІЛЬТРИ ===== */
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: montserrat-g, sans-serif;
+  transition: .2s;
+}
+
+.filter-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.filter-btn.active {
+  background: var(--own-color);
+  border-color: var(--own-color);
+}
+
+/* ===== МОДАЛЬНІ ВІКНА ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #1f3437;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  color: white;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100;
+}

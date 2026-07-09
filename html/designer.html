@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кабінет дизайнера | ROZKISH</title>
+
+  <script src="libs/btn/anim-menu-btn.min.js" defer></script>
+  
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cabinet.css">
+  <link rel="stylesheet" href="css/designer.css">
+
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+<!-- ===== BACKGROUND як на інших сторінках ===== -->
+<div class="portfolio-bg">
+  <div class="portfolio-layer layer-back"></div>
+  <div class="portfolio-layer layer-middle"></div>
+  <div class="portfolio-layer layer-front"></div>
+</div>
+
+<div class="portfolio-overlay"></div>
+
+<main>
+
+<!-- ===== HEADER ===== -->
+<div class="container">
+  <div class="top-line">
+    <div class="row">
+
+      <div class="col col--center">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="ROZKISH">
+        </a>
+      </div>
+
+      <div class="col col--center col--right col--lead">
+        <nav class="main-menu">
+          <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="portfolio.html">Проєкти</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <a href="contact.html" class="button button--top">Зв'язатись</a>
+
+           
+
+            <li>
+              <button id="logoutBtn" class="button button--top logout-btn active">
+                Вийти
+              </button>
+          </li>
+
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col col--center">
+        <button class="submenu anim-menu-btn">
+          <i class="anim-menu-btn__icon anim-menu-btn__icon--close"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="menu-wrapper">
+  <nav class="main-menu">
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="portfolio.html">Проєкти</a></li>
+      <li><a href="about.html">Про нас</a></li>
+      <a href="contact.html" class="button button--top">Зв'язатись</a>
+    </ul>
+  </nav>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<section class="cabinet-page">
+
+
+  <div class="container">
+
+    <h2 class="cabinet-title">Кабінет дизайнера</h2>
+
+    <a href="calendar.html" class="button">
+    Календар проєктів
+    </a>
+
+    <div class="cabinet-user">
+      <div class="cabinet-avatar">🎨</div>
+      <div>
+        <h3>Вітаємо, дизайнер</h3>
+        <p>Тут відображаються всі заявки клієнтів</p>
+      </div>
+    </div>
+
+    <div class="designer-stats">
+
+      <div class="stat-card">
+        <span id="statNew">0</span>
+        <p>Нові</p>
+      </div>
+
+      <div class="stat-card">
+        <span id="statProgress">0</span>
+        <p>В роботі</p>
+      </div>
+
+      <div class="stat-card">
+        <span id="statDone">0</span>
+        <p>Завершені</p>
+      </div>
+
+    </div>
+
+    <div class="designer-filters">
+
+      <button data-filter="all" class="filter-btn active">
+        Всі
+      </button>
+
+      <button data-filter="new" class="filter-btn">
+        Нові
+      </button>
+
+      <button data-filter="in-progress" class="filter-btn">
+        В роботі
+      </button>
+
+      <button data-filter="done" class="filter-btn">
+        Завершені
+      </button>
+
+    </div>
+
+    <div class="cabinet-list" id="designerList"></div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-col">
+      <img src="img/logo.png" class="footer-logo" alt="">
+      <p>ROZKISH — студія дизайну квартир.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Навігація</h4>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="portfolio.html">Проєкти</a></li>
+        <li><a href="about.html">Про нас</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Контакти</h4>
+      <p>+380 XX XXX XX XX</p>
+      <p>rozkish.studio@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Соцмережі</h4>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+        <a href="#">Behance</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 ROZKISH. Всі права захищені.
+  </div>
+</footer>
+
+</main>
+
+<div class="mobile-overlay"></div>
+
+<script src="./js/designer.js"></script>
+
+</body>
+</html>

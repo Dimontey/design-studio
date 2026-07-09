@@ -1,0 +1,112 @@
+/* ===== BURGER MENU (mobile) ===== */
+
+/* На великих екранах бургер прихований */
+.submenu {
+  display: none;
+}
+
+
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 991px) {
+
+    .top-line .main-menu {
+    display: none;
+  }
+
+  /* показуємо бургер */
+  .submenu {
+    display: block;
+  }
+
+  /* ховаємо основне меню + кнопку і готуємо до виїзду */
+  .menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #1f3437;
+    padding: 110px 28px 28px;
+    transform: translateX(100%);
+    transition: .35s ease;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+  }
+
+  /* коли бургер активний — меню виїжджає */
+  .menu-wrapper.active {
+    transform: translateX(0);
+  }
+
+  /* робимо меню вертикальним */
+  .main-menu li {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  /* прибираємо зайвий відступ у кнопки */
+  .button--top {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+   .top-line .row {
+    justify-content: space-between;
+  }
+
+   .top-line .logo {
+    margin-left: 1.5em;
+  }
+
+   .submenu {
+    margin-right: 1.5em;
+  }
+
+  /* === ВИРІВНЮВАННЯ ВМІСТУ МОБІЛЬНОГО МЕНЮ === */
+
+/* Робимо список вертикальним і по центру */
+.menu-wrapper .main-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Центруємо всі посилання меню */
+.menu-wrapper .main-menu li {
+  margin: 0;
+}
+
+/* Щоб кнопка не розтягувалась */
+.menu-wrapper .button--top {
+  align-self: center;
+}
+
+/* Відділяємо кабінет від кнопки */
+.menu-wrapper .menu-cabinet {
+  margin-top: 10px;
+}
+
+/* Центруємо іконку кабінету */
+.menu-wrapper .menu-cabinet a {
+  justify-content: center;
+}
+
+}
+
+
+/* ===== DESKTOP ===== */
+@media (min-width: 992px) {
+  .menu-wrapper {
+    display: none;
+  }
+}
+

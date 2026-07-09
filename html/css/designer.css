@@ -1,0 +1,119 @@
+.price-set {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #6b8a8f;
+  background: #2f4b50;
+  color: #fff;
+  outline: none;
+  width: 140px;
+  transition: 0.2s;
+}
+
+.price-input::placeholder {
+  color: #9fb3b7;
+}
+
+.price-input:focus {
+  border-color: #00c2ff;
+  box-shadow: 0 0 6px rgba(0, 194, 255, 0.5);
+}
+
+.set-price-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #00c2ff, #00e0a3);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.set-price-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 194, 255, 0.4);
+}
+
+.set-price-btn:active {
+  transform: scale(0.97);
+}
+
+.request-card strong {
+  color: #00e0a3;
+  font-size: 16px;
+}
+
+.comment-block{
+    margin-top: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comment-input{
+    width: 100%;
+    min-height: 80px;
+
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+
+    resize: vertical;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.comment-input:focus{
+    border-color: #14d9d9;
+    box-shadow: 0 0 20px rgba(20,217,217,0.15);
+}
+
+.comment-input::placeholder{
+    color: rgba(255,255,255,0.35);
+}
+
+.save-comment-btn{
+    width: fit-content;
+
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #11d4d4,
+        #19e6c7
+    );
+
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.save-comment-btn:hover{
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(20,217,217,0.25);
+}

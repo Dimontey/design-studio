@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script src="libs/btn/anim-menu-btn.min.js" defer></script>
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/burger.css">
+	<script src="js/app.js" defer></script>
+
+</head>
+<body>
+
+<main>
+
+<section id="home" class="view">
+
+	<div class="swiper slider">
+
+		<div class="slider-ui">
+
+			<div class="container header-wrapper">
+
+				<div class="top-line">
+
+					<div class="row">
+
+						<div class="col col--center">
+							<a href="#" class="logo">
+								<img src="img/logo.png" alt="ROZKISH"">
+							</a>
+						</div>
+
+						<div class="col col--center col--right col--lead">
+							<nav class="main-menu">
+								<ul>
+									<li class="active"><a href="./index.html">Головна</a></li>
+									<li><a href="./portfolio.html">Проєкти</a></li>
+									<li><a href="./about.html">Про нас</a></li>
+									<a href="contact.html" class="button button--top">Зв'язатись</a>
+									<li class="menu-cabinet">
+										<a href="./login.html">
+											<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+												<path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20" stroke="currentColor" stroke-width="2"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+								</nav>
+						</div>
+
+						<div class="col col--center">
+							<button class="submenu anim-menu-btn">
+								<i class="anim-menu-btn__icon anim-menu-btn__icon--close"></i>
+							</button>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="header-content">
+
+					<div class="header-content__slide active">
+						<h1 class="letters">Зростай</h1>
+						<div class="header-content__info">
+							<p>ROZKISH — студія дизайну квартир, що створює функціональні, стильні та продумані інтер’єри.</p><br>
+							<button class="button button--main" id="goRequest">Замовити дизайн</button>
+						</div>
+					</div>
+
+					<div class="header-content__slide">
+						<h1 class="letters">З нами</h1>
+						<div class="header-content__info">
+							<p>Ми працюємо разом із вами — від першої ідеї до завершеної квартири, де кожна деталь має сенс.</p><br>
+							<button class="button button--main" id="goRequest">Замовити дизайн</button>
+						</div>
+					</div>
+
+					<div class="header-content__slide">
+						<h1 class="letters">Мерщій</h1>
+						<div class="header-content__info">
+							<p>Мерщій до простору, де комфорт, стиль і ваша індивідуальність зливаються в єдине ціле.</p><br>
+							<button class="button button--main" id="goRequest">Замовити дизайн</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="header-bottom">
+					
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="swiper-wrapper">
+
+			<div class="swiper-slide slider__item">
+				<div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/slides/slide-1-layer-back.jpg);"></div>
+				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/slides/slide-1-layer-middle.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(img/slides/slide-1-layer-front.png);"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/slides/slide-2-layer-back.jpg);"></div>
+				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/slides/slide-2-layer-middle.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(img/slides/slide-2-layer-front.png);"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/slides/slide-3-layer-back.jpg);"></div>
+				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/slides/slide-3-layer-middle.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(img/slides/slide-3-layer-front.png);"></div>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</section>
+
+<div class="menu-wrapper">
+  <nav class="main-menu">
+    <ul>
+      <li><a href="#home" data-route>Головна</a></li>
+      <li><a href="./portfolio.html">Проєкти</a></li>
+      <li><a href="./about.html">Про нас</a></li>
+      <a href="contact.html" class="button button--top">Зв'язатись</a>
+
+      <li class="menu-cabinet">
+										<a href="./cabinet.html">
+											<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+												<path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20" stroke="currentColor" stroke-width="2"/>
+											</svg>
+										</a>
+									</li>
+    </ul>
+  </nav>
+</div>
+
+
+<section id="request" class="view hidden">
+  <div class="container">
+    <h2>Про нас</h2>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+	<div class="container footer-grid">
+		<div class="footer-col">
+			<img src="img/logo.png" alt="ROZKISH" class="footer-logo">
+			<p>ROZKISH — студія дизайну квартир.</p>
+		</div>
+
+		<div class="footer-col">
+		<h4>Навігація</h4>
+		<ul>
+			<li><a href="./index.html">Головна</a></li>
+			<li><a href="./portfolio.html">Проєкти</a></li>
+			<li><a href="./about.html">Про нас</a></li>
+		</ul>
+		</div>
+
+		<div class="footer-col">
+			<h4>Контакти</h4>
+			<p>+380 XX XXX XX XX</p>
+			<p>rozkish.studio@gmail.com</p>
+		</div>
+
+		<div class="footer-col">
+			<h4>Соцмережі</h4>
+			<div class="socials">
+				<a href="#">Instagram</a>
+				<a href="#">Telegram</a>
+				<a href="#">Behance</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		© 2026 ROZKISH. Всі права захищені.
+	</div>
+</footer>
+
+</main>
+
+<div class="mobile-overlay"></div>
+
+</body>
+</html>

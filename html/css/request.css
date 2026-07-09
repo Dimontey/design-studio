@@ -1,0 +1,243 @@
+/* ===== СТОРІНКА ЗАЯВКИ ===== */
+body.request-page {
+  min-height: 100vh;
+  padding: 60px 0 0;
+   background: transparent;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* Блюрений фон */
+.request-bg {
+  position: fixed;
+  inset: 0;
+  background-image: url("../img/slides/slide-1-layer-back.jpg"); /* той самий фон, що на головній */
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+
+
+/* Карточка форми */
+.request-card {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto 60px;
+  background: rgba(31, 52, 55, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding: 32px 28px;
+   z-index: 3;
+}
+
+
+.field label {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Заголовок */
+.request-card h2 {
+  text-align: center;
+  margin-bottom: 26px;
+  letter-spacing: 0.08em;
+}
+
+/* Поля */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-size: 0.8em;
+  letter-spacing: .12em;
+  color: var(--gray-color);
+}
+
+/* Інпути */
+.field input,
+.field select,
+.field textarea {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: white;
+  font-family: montserrat-g, sans-serif;
+}
+
+/* Текстове поле */
+.field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Фокус */
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--own-color);
+}
+
+/* Заголовок "Ваші заявки" */
+.requests-title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.request-card {
+  animation: fadeUp .6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  box-shadow: 0 0 0 1px var(--own-color);
+}
+
+
+.request-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-card .button--main {
+  align-self: center;
+  margin-top: 12px;
+  min-width: 220px;
+}
+
+/* --- Стилізація SELECT --- */
+.field select {
+  appearance: none; /* прибираємо стандартний стиль браузера */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* Робимо свою стрілку */
+.field {
+  position: relative;
+}
+
+.field select {
+  padding-right: 32px; /* місце під стрілку */
+}
+
+.field::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(20%);
+  font-size: 10px;
+  color: var(--gray-color);
+  pointer-events: none;
+}
+
+/* Стилізація випадаючого списку в деяких браузерах */
+.field select option {
+  background: #1f3437;
+  color: white;
+}
+
+
+/* ===== КРУГЛА КНОПКА "ПОВЕРНУТИСЬ" ===== */
+.back-circle {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-decoration: none;
+  z-index: 20;
+
+  transition: .25s ease;
+}
+
+.back-circle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ефект при наведенні */
+.back-circle:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateX(-3px);
+}
+
+
+/* ===== ПОЛЕ З ПОМИЛКОЮ ===== */
+.input-error{
+  border: 1px solid #ff4d4d !important;
+  background: rgba(255, 77, 77, 0.08);
+}
+
+/* ===== ТЕКСТ ПОМИЛКИ ===== */
+.error{
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeError 0.3s ease;
+}
+
+/* Іконка перед текстом */
+.error::before{
+  content: "⚠";
+  font-size: 14px;
+}
+
+/* ===== АНІМАЦІЯ ===== */
+@keyframes fadeError{
+  from{
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color: #6c63ff;
+  box-shadow: 0 0 6px rgba(108,99,255,0.4);
+}

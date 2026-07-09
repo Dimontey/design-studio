@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Залишити заявку | ROZKISH</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/request.css">
+  <script src="js/app.js" defer></script>
+   <script src="js/request.js" defer></script>
+</head>
+<body class="request-page">
+
+  <a href="index.html" class="back-circle">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 12H5M5 12L11 6M5 12L11 18"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+  </svg>
+</a>
+
+
+
+  <!-- Фонове зображення з блюром -->
+  <div class="request-bg"></div>
+
+  <!-- Затемнений шар поверх фону -->
+  <div class="request-overlay">
+
+    <main>
+      <section class="request-section">
+        <div class="container">
+
+          <div class="request-card">
+
+            <h2>Залишити заявку</h2>
+
+            <form id="requestForm">
+
+              <div class="field">
+                <label for="reqName">Ім’я</label>
+                <input id="reqName" type="text" placeholder="Ваше ім’я" required>
+              </div>
+
+              <div class="field">
+                <label for="reqPhone">Телефон</label>
+                <input id="reqPhone" type="tel" placeholder="+380..." required>
+              </div>
+
+              <div class="field">
+                <label for="reqType">Тип квартири</label>
+                <select id="reqType" required>
+                  <option value="">Оберіть варіант</option>
+                  <option>Однокімнатна</option>
+                  <option>Двокімнатна</option>
+                  <option>Трикімнатна</option>
+                  <option>Студія</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="reqDesc">Опис проєкту</label>
+                <textarea id="reqDesc" placeholder="Опишіть вашу ідею..." rows="4"></textarea>
+              </div>
+
+              <button type="submit" class="button button--main">
+                Відправити заявку
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+</body>
+</html>

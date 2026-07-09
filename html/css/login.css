@@ -1,0 +1,230 @@
+/* ===== GLOBAL PARALLAX BACKGROUND ===== */
+
+html, body {
+  background: transparent !important;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+.portfolio-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.portfolio-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.layer-back {
+  background-image: url("../img/slides/slide-4-layer-back.jpg");
+  opacity: 0.95;
+}
+
+.layer-middle {
+  background-image: url("../img/slides/slide-4-layer-middle.png");
+  opacity: 0.65;
+}
+
+.layer-front {
+  background-image: url("../img/slides/slide-4-layer-front.png");
+  opacity: 0.45;
+}
+
+.portfolio-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(43, 71, 75, 0.60);
+  z-index: 1;
+  pointer-events: none;
+
+  background: rgba(43, 71, 75, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+/* контент поверх */
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.login-card {
+  width: 420px;
+  padding: 50px 40px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.15);
+
+  text-align: center;
+  color: #fff;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.login-card h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+
+.login-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-card input,
+.login-card select {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 15px;
+}
+
+.login-card input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.login-card input:focus,
+.login-card select:focus {
+  outline: none;
+  border-color: #8aa6b8;
+  background: rgba(255,255,255,0.12);
+}
+
+.login-card .button {
+  width: 50%;
+  margin-top: 10px;
+}
+
+.login-card {
+  transition: 0.35s;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+
+@media (max-width: 500px) {
+  .login-card {
+    width: 90%;
+    padding: 40px 25px;
+  }
+}
+
+
+.login-card select {
+  width: 100%;
+  padding: 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 15px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+}
+
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+
+.login-card select:focus {
+  outline: none;
+  border-color: #8aa6b8;
+  background: rgba(255,255,255,0.12);
+}
+
+.login-card select option {
+  color: #fff;
+  background: #2f4f52;
+
+
+}
+
+.back-btn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: 0.3s;
+  z-index: 100;
+}
+
+.back-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: #fff;
+  stroke-width: 2;
+  fill: none;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateX(-3px);
+}
+
